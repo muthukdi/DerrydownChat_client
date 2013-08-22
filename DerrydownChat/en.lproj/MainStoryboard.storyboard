@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSA-Rt-zmb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="o5o-Xb-GMs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="2" eventType="editingDidEndOnExit" id="7wv-9z-uHF"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoP-2h-Ysh">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Message">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPressed:" destination="2" eventType="touchUpInside" id="58x-Ie-wXa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-xy-Jh6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="46y-Xl-4w7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCg-hL-V1w">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectPressed:" destination="2" eventType="touchUpInside" id="3rY-ob-Ube"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Offline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l8-YC-etB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.24034977939999999" blue="0.032421229209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Offline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bd-eS-GdP">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.24034977939999999" blue="0.032421229209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7l8-YC-etB" firstAttribute="leading" secondItem="XSA-Rt-zmb" secondAttribute="leading" type="default" id="0S8-jE-7z9"/>
+                            <constraint firstItem="DoP-2h-Ysh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="159" id="4zT-dZ-2wf"/>
+                            <constraint firstItem="DoP-2h-Ysh" firstAttribute="centerX" secondItem="XSA-Rt-zmb" secondAttribute="centerX" type="default" id="7IE-MD-XPd"/>
+                            <constraint firstItem="5bd-eS-GdP" firstAttribute="trailing" secondItem="XSA-Rt-zmb" secondAttribute="trailing" type="default" id="ENO-1y-jFz"/>
+                            <constraint firstItem="XSA-Rt-zmb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="102" id="NT6-Yo-pBh"/>
+                            <constraint firstItem="tPo-xy-Jh6" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="P7P-SN-cjq"/>
+                            <constraint firstItem="7l8-YC-etB" firstAttribute="baseline" secondItem="cCg-hL-V1w" secondAttribute="baseline" type="default" id="RTG-d5-BA5"/>
+                            <constraint firstItem="5bd-eS-GdP" firstAttribute="baseline" secondItem="cCg-hL-V1w" secondAttribute="baseline" type="default" id="Scc-ov-xtM"/>
+                            <constraint firstItem="cCg-hL-V1w" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="X0k-QW-wjo"/>
+                            <constraint firstItem="cCg-hL-V1w" firstAttribute="centerX" secondItem="XSA-Rt-zmb" secondAttribute="centerX" type="default" id="ax0-wZ-wz4"/>
+                            <constraint firstItem="tPo-xy-Jh6" firstAttribute="trailing" secondItem="XSA-Rt-zmb" secondAttribute="trailing" type="default" id="bsI-SS-ura"/>
+                            <constraint firstItem="tPo-xy-Jh6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="216" id="hz8-xY-ZIF"/>
+                            <constraint firstItem="XSA-Rt-zmb" firstAttribute="leading" secondItem="tPo-xy-Jh6" secondAttribute="leading" type="default" id="ndh-6V-Ex1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="cCg-hL-V1w" id="WnP-gv-zxo"/>
+                        <outlet property="messageField" destination="XSA-Rt-zmb" id="tpi-n0-fOe"/>
+                        <outlet property="messageLabel" destination="tPo-xy-Jh6" id="eSm-O8-jpO"/>
+                        <outlet property="sendButton" destination="DoP-2h-Ysh" id="0f5-Jj-CvQ"/>
+                        <outlet property="theirStatus" destination="5bd-eS-GdP" id="aJK-fH-zHG"/>
+                        <outlet property="yourStatus" destination="7l8-YC-etB" id="Z10-Eb-EkU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
