@@ -25,7 +25,7 @@
 - (void) sendRequest
 {
     self.responseData = [NSMutableData data];
-    NSString *fullURL = [NSString stringWithFormat:@"http://derrydown.tk/dilip/get.php?usernameField=%@", username];
+    NSString *fullURL = [NSString stringWithFormat:@"http://192.168.1.3/dilip/get.php?usernameField=%@", username];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
@@ -69,7 +69,14 @@
 
     NSString *theirMessage = (NSString *)[res objectForKey:@"message"];
     NSLog(@"The other user's message is %@", theirMessage);
-    [_delegate messageHasBeenRetrieved:theirMessage];
+    if ([theirMessage isEqualToString:@"reset"])
+    {
+        [_delegate resetVariables];
+    }
+    else
+    {
+        [_delegate messageHasBeenRetrieved:theirMessage];
+    }
 }
 
 @end

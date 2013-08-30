@@ -26,7 +26,7 @@
 {
     self.responseData = [NSMutableData data];
     NSString *modified = [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *fullURL = [NSString stringWithFormat:@"http://derrydown.tk/dilip/send.php?usernameField=%@&messageField=%@", username, modified];
+    NSString *fullURL = [NSString stringWithFormat:@"http://192.168.1.3/dilip/send.php?usernameField=%@&messageField=%@", username, modified];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
@@ -64,7 +64,19 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    [_delegate messageHasBeenSent];
+    // convert to JSON
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error:&myError];
+    
+    NSString *result = (NSString *)[res objectForKey:@"result"];
+    if ([result isEqualToString:@"reset"])
+    {
+        [_delegate resetVariables];
+    }
+    else
+    {
+        [_delegate messageHasBeenSent];
+    }
 }
 
 @end

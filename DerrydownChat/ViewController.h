@@ -12,10 +12,12 @@
 #import "SendMessageRequest.h"
 #import "GetMessageRequest.h"
 
+
 @interface ViewController : UIViewController <UsernameRequestDelegate,
                                                 StatusRequestDelegate,
                                                 SendMessageRequestDelegate,
-                                                GetMessageRequestDelegate>
+                                                GetMessageRequestDelegate,
+                                                ResetRequestDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;

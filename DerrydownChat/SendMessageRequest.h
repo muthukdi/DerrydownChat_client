@@ -12,6 +12,7 @@
 @protocol SendMessageRequestDelegate
 @optional
 - (void) messageHasBeenSent;
+- (void) resetVariables;
 @end
 
 @interface SendMessageRequest : NSObject <NSURLConnectionDataDelegate>

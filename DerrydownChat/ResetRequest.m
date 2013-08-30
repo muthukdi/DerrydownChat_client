@@ -1,14 +1,14 @@
 //
-//  StatusRequest.m
+//  ResetRequest.m
 //  DerrydownChat
 //
-//  Created by Dilip Muthukrishnan on 13-08-21.
+//  Created by Dilip Muthukrishnan on 13-08-23.
 //  Copyright (c) 2013 Dilip Muthukrishnan. All rights reserved.
 //
 
-#import "StatusRequest.h"
+#import "ResetRequest.h"
 
-@implementation StatusRequest
+@implementation ResetRequest
 
 @synthesize responseData = _responseData;
 
@@ -25,7 +25,7 @@
 - (void) sendRequest
 {
     self.responseData = [NSMutableData data];
-    NSString *fullURL = [NSString stringWithFormat:@"http://192.168.1.3/dilip/status.php?usernameField=%@", username];
+    NSString *fullURL = [NSString stringWithFormat:@"http://192.168.1.3/dilip/reset.php"];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
@@ -63,28 +63,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    // convert to JSON
-    NSError *myError = nil;
-    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error:&myError];
-    
-    // Analyze the response
-    NSString *status = (NSString *)[res objectForKey:@"status"];
-    NSLog(@"Status of the other user is %@", status);
-    if ([status isEqualToString:@"reset"])
-    {
-        [_delegate resetVariables];
-    }
-    else if ([status isEqualToString:@"0"])
-    {
-        NSLog(@"The other user is not online yet...");
-        turn = 1;
-        [_delegate respondToStatusRequest:NO];
-    }
-    else
-    {
-        NSLog(@"The other user is online, now!");
-        [_delegate respondToStatusRequest:YES];
-    }
+    [_delegate resetVariables];
 }
 
 @end

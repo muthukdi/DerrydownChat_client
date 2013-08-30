@@ -108,4 +108,22 @@
     }
 }
 
+- (void) resetVariables
+{
+    username = @"";
+    message = @"";
+    turn = 0;
+    onlineStatus = 0;
+    usersReady = 0;
+    _messageField.text = @"";
+    [_messageField resignFirstResponder];
+    _messageLabel.text = @"Label";
+    _yourStatus.text = @"Offline";
+    _yourStatus.textColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+    _theirStatus.text = @"Offline";
+    _theirStatus.textColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+    _connectButton.hidden = turn;
+    _sendButton.hidden = YES;
+}
+
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		984C1C6C17C72A540047D977 /* ResetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 984C1C6B17C72A540047D977 /* ResetRequest.m */; };
 		9857412217C46C75008175C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9857412117C46C75008175C0 /* UIKit.framework */; };
 		9857412417C46C75008175C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9857412317C46C75008175C0 /* Foundation.framework */; };
 		9857412617C46C75008175C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9857412517C46C75008175C0 /* CoreGraphics.framework */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		984C1C6A17C72A540047D977 /* ResetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetRequest.h; sourceTree = "<group>"; };
+		984C1C6B17C72A540047D977 /* ResetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetRequest.m; sourceTree = "<group>"; };
 		9857411E17C46C75008175C0 /* DerrydownChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DerrydownChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9857412117C46C75008175C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9857412317C46C75008175C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +107,8 @@
 				98AEDAAF17C58B8200C6A5EC /* GetMessageRequest.m */,
 				9857413C17C46C75008175C0 /* ViewController.h */,
 				9857413D17C46C75008175C0 /* ViewController.m */,
+				984C1C6A17C72A540047D977 /* ResetRequest.h */,
+				984C1C6B17C72A540047D977 /* ResetRequest.m */,
 				9857414417C47C6A008175C0 /* UsernameRequest.h */,
 				9857414517C47C6A008175C0 /* UsernameRequest.m */,
 				98AEDAA817C572B800C6A5EC /* StatusRequest.h */,
@@ -200,6 +205,7 @@
 				98AEDAAA17C572B800C6A5EC /* StatusRequest.m in Sources */,
 				98AEDAAD17C58B6900C6A5EC /* SendMessageRequest.m in Sources */,
 				98AEDAB017C58B8200C6A5EC /* GetMessageRequest.m in Sources */,
+				984C1C6C17C72A540047D977 /* ResetRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

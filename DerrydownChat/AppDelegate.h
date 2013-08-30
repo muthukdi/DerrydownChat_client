@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ResetRequest.h"
 
 NSString *username;
 NSString *message;

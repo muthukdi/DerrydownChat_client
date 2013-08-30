@@ -26,7 +26,7 @@
 - (void) sendRequest
 {
     self.responseData = [NSMutableData data];
-    NSString *fullURL = [NSString stringWithFormat:@"http://derrydown.tk/dilip/username.php?usernameField=%@", _username];
+    NSString *fullURL = [NSString stringWithFormat:@"http://192.168.1.3/dilip/username.php?usernameField=%@", _username];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURL]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }

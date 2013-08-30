@@ -1,21 +1,20 @@
 //
-//  GetMessageRequest.h
+//  ResetRequest.h
 //  DerrydownChat
 //
-//  Created by Dilip Muthukrishnan on 13-08-21.
+//  Created by Dilip Muthukrishnan on 13-08-23.
 //  Copyright (c) 2013 Dilip Muthukrishnan. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
 
-@protocol GetMessageRequestDelegate
+@protocol ResetRequestDelegate
 @optional
-- (void) messageHasBeenRetrieved:(NSString *)theirMessage;
 - (void) resetVariables;
 @end
 
-@interface GetMessageRequest : NSObject <NSURLConnectionDataDelegate>
+@interface ResetRequest : NSObject <NSURLConnectionDataDelegate>
 {
     id _delegate;
 }

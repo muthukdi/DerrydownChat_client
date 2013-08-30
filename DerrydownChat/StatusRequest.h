@@ -12,6 +12,7 @@
 @protocol StatusRequestDelegate
 @optional
 - (void) respondToStatusRequest:(BOOL)status;
+- (void) resetVariables;
 @end
 
 @interface StatusRequest : NSObject <NSURLConnectionDataDelegate>
